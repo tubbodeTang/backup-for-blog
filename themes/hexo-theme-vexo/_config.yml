@@ -1,0 +1,30 @@
+author: tubbodeTang # 作者
+description: Keep Fighting
+keyword: 
+favicon: css/images/myLogo.png
+
+excerpt_link: Read more
+
+menu:
+ Home: /
+ Archives: /archives/
+
+# highlight
+highlight:
+  tomorrow
+
+# gitment
+gitment_owner: tubbodeTang
+gitment_repo: tubbodeTang.github.io
+gitment_oauth_id: 2eb057f87192cbf561c3
+gitment_oauth_secret: db8188fb69bd9075c92b9a0fc2efc659b4194d9c
+
+# uyan
+# if you want to use uyan as your blog comment, plz remove/comment out gitment config
+
+baidu_id: 
+
+about: 
+  banner: http://file.muyutech.com/about.jpg
+  avatar: https://avatars3.githubusercontent.com/u/16443628?v=3&s=460
+  description: The end is always near.
