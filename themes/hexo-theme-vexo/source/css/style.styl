@@ -26,6 +26,8 @@
 
 ::-webkit-scrollbar
     width: 5px
+    height: 8px
+
 
 ::-webkit-scrollbar-thumb
     border-radius: 10px
@@ -46,6 +48,19 @@ body
 
 ol, ul, form, p
   margin: 0
+
+.markdown-content
+  p
+    margin: 20px
+  li
+    p
+      margin:0 0 20px 0
+
+.time-tag
+  text-align:right
+  span
+    display:block
+    margin:10px
 
 a
   text-decoration: none
@@ -145,7 +160,7 @@ h2.article-head
   @media m-mobile
     padding: 80px 10px 25px 10px
   h2
-    margin: .4em 0
+    margin: 0.4em 0 1em 0;
     font-size: 2.2em
     color: color-white
     text-shadow: 0 0 40px color-dark
