@@ -2,7 +2,7 @@
   <% page.posts.each(function(post) { %>
   
   <% if (post.title.indexOf('【日课】') ==-1){ %>
-  <% console.log(post.title); %>
+  <!-- <% console.log(post.title); %> -->
   <article class="article-card">
     <h2 class="article-head">
       <a href="<%- url_for(post.path) %>"><%- post.title %></a>
