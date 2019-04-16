@@ -1,0 +1,4 @@
+---
+# title: {{diary}}
+layout: diary
+---

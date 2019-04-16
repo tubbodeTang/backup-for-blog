@@ -10,11 +10,13 @@
       if (!years[y]) {
         years[y] = [];
       }
-      years[y].push(post);
+      if(post.title.indexOf('【日课】') ==-1){
+        years[y].push(post);
+      }
     })
   %>
   <% for (let year of Object.keys(years).reverse()) { %>
-    <%- partial('_partial/archive', { year: year, posts: years[year].reverse() }) %>
+  <%- partial('_partial/archive', { year: year, posts: years[year].reverse() }) %>
   <% } %>
 </main>
 
