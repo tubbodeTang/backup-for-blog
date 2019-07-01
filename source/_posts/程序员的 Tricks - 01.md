@@ -1,0 +1,66 @@
+---
+title: 工具推荐——Cmder
+date: 2018-08-10 08:20:06
+tags: Tools
+categories: Tools
+---
+
+
+这两天坐地铁，听到站内广播：
+
+北京地铁站内不再开具纸质发票，有需要的乘客得去 「北京一卡通 APP」获取电子发票。
+
+得，无纸化了。
+
+这其实也算是城市无纸化办公模式的一个缩影。不知道大家注意过没有，现在很多发票都变成电子的了，申领操作也都可以通过网络以及各种电子设备进行。
+
+这也就从侧面反映出相比以前人们需要阅读大量的纸质文档，现在取而代之的是每天面对电脑、智能手机这些电子产品，我们每天都在接收、产生、传递着大量的电子化数据。
+
+作为一个前端码农，我们比普通人离这些电子化数据更近一些，每天都在和大量需要展示的数据打交道。但是，有些数据并不是拿来就能用的。
+
+由于各种各样的原因，我们每天工作的时间其实有一部分并不是在写代码，而是在整理这些未经处理不能拿来使用的数据。数据量小的话还好说，如果数据量大， 那简直要逼疯一个人啊！
+
+不过好在，我们是码农，遇到这种情况，第一个想到的就是：偷懒，这种重复又没有营养的工作，应当交给计算机去帮我们完成，我们的时间如此宝贵，还要用来多写几个 bug 呢。
+
+而这几天的我总是遇到上面说的「各种各样的原因」，所以也找到一些处理这些烦人数据的「偷懒」方法。想到以后可能还会源源不断的遇到这种事，而且大家在工作中难免也常会遇到，不如总结起来，形成一个栏目「程序员的 Tricks」，以后找的时候也方便一些。
+
+好了，扯了这么多，今天先分享第一个小 Trick 吧。
+
+---
+
+情景：
+
+> 从一个放了 48 张 3M 左右大小照片的单页 PPT 中提取出所需要的照片。
+
+听起来就很变态，48 张大图放在一张 PPT ，真不知道提供数据的人怎么想的，我连打开这个 PPT 文档电脑都快卡的不能动了好吗？还让我一张一张的保存？
+
+登时我就快炸了，然而机（懒）智（惰）的我，立刻搜索到了化解尴尬的办法，骚操作走一波：
+
+有这样一个一页放了 N 多大图的 PPT
+
+![ppt](https://mmbiz.qpic.cn/mmbiz_png/Sv04OO32Nsbr66iaXxmcyHMg2agzW8um5PeKVd3DiautU3axnH7DbIuNtFKGam8ZQeomicxf2wR7R1pjFxdczblnQ/640?tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "ppt")
+
+
+1. 把 PPT 文件的后缀名改成压缩文件的后缀名「 .rar 」
+
+
+
+![rename](https://mmbiz.qpic.cn/mmbiz_png/Sv04OO32Nsbr66iaXxmcyHMg2agzW8um5awe6CPqeyeqC3ic5Yg5kIvBn02e7Rk460Ng6b38oyYETpSkVyLJ5Nsg/640?tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "rename")
+
+
+2. 把变成压缩文件的 PPT 解压到文件夹
+
+![unzip](https://mmbiz.qpic.cn/mmbiz_png/Sv04OO32Nsbr66iaXxmcyHMg2agzW8um5sST1OwWibiao4mgjp6AmxkepOuxPHAxBveSqt04Kq922bR5eoMoJsZXg/640?tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "unzip")
+
+
+3. 进入解压的文件夹，路径如下「 示例 > ppt > media 」，可以看到所有用在 PPT 中的图片，都在该文件夹中，直接按需获取即可
+
+
+![getAll](https://mmbiz.qpic.cn/mmbiz_png/Sv04OO32Nsbr66iaXxmcyHMg2agzW8um5X5eiaicyHxzXgJjkIhtFgz0fSRmxxhHkovqKpPVib3R65CyrcwYjr7USg/640?tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "getAll")
+
+
+当然啦，这个方法不止适用于我遇到的这种变态情况，如果平时看到 PPT 中好的素材比较多，也可以通过这个方式来批量提取。
+
+
+还有更多的应用场景我就不赘述了，了解了这个方法，相信遇到别的情况之时，也能快速的想起并应用其中。
+
