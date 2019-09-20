@@ -1,4 +1,0 @@
----
-# title: {{diary}}
-layout: diary
----

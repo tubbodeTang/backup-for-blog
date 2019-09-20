@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://tubbodetang.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -50,7 +50,7 @@ highlight:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 100
+  per_page: 0
   order_by: -date
   
 # Category & Tag
@@ -79,5 +79,14 @@ theme: hexo-theme-vexo
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:tubbodeTang/tubbodeTang.github.io.git
+  repo: 
+      github: git@github.com:tubbodeTang/tubbodeTang.github.io.git
+      coding: git@git.dev.tencent.com:tubbodeTang/tubbodeTang.coding.me.git
   branch: master
+
+
+# 自动生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
