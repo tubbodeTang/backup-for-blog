@@ -1,16 +1,17 @@
 ---
 title: Echarts 之复合饼图的解决方案
-date: 2018-05-22 22:39:01
 tags: Echarts
 categories: Javascript
+abbrlink: 38946
+date: 2018-05-22 22:39:01
 ---
 
 >Echarts 是百度出品的功能强大的开源可视化库，由 Javascript 实现。
 >具有丰富的可视化类型，良好的跨平台特性，绚丽的视觉效果。
 >是大数据分析展示的有力武器
-  
 
- 
+
+
 老实说其实在我刚进入前端开发这个领域的时候就听说并使用了 Echarts ，那个时候还是 1.0 版本。
 
 最开始只是用到一些简单的条、饼、线图的组合展示，有时候我还会偷懒直接使用 [图说](http://tushuo.baidu.com/) 的可视化功能进行操作，也还挺方便的，不用记那么多属性，但是现在 [图说](http://tushuo.baidu.com/) 已经满足不了我更高级的需求了，有什么问题还是看文档更清晰。
@@ -43,10 +44,10 @@ categories: Javascript
 
 于是乎有了下面这个效果，具体代码实现和结果可以到 Gallery 里 [查看](http://gallery.echartsjs.com/editor.html?c=xHJaWqD-1Q)。
 
-![实现效果缩略图](http://echarts.baidu.com/ecg-storage/img/xHJaWqD-1Q.png "实现效果缩略图")
+![实现效果图](https://github.com/tubbodeTang/PicBed/blob/master/echart_complexpie.png?raw=true)
 
 
-两个版本的思路出来效果之后，我都给了 GitHub Issues 上和我相同问题的那个哥们一个回复，他也回复了我，和大家一起思考问题的感觉还是很棒的。
+两个版本的思路出来效果之后，我都给了 GitHub Issues 上和我相同问题的那个哥们一个回复，他也回复了我，和大家一起思考问题的感觉还是很棒的。E []E
 
 我发表在 Gallery 里的 [示例](http://gallery.echartsjs.com/editor.html?c=xHJaWqD-1Q)，截至目前也已经有了二十多次的浏览量。
 

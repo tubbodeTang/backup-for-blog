@@ -1,8 +1,9 @@
 ---
 title: 程序员的 Tricks - 01
-date: 2018-08-10 08:20:06
 tags: Tools
 categories: Tools
+abbrlink: 49696
+date: 2018-08-10 08:20:06
 ---
 
 
@@ -38,25 +39,23 @@ categories: Tools
 
 有这样一个一页放了 N 多大图的 PPT
 
-![ppt](https://mmbiz.qpic.cn/mmbiz_png/Sv04OO32Nsbr66iaXxmcyHMg2agzW8um5PeKVd3DiautU3axnH7DbIuNtFKGam8ZQeomicxf2wR7R1pjFxdczblnQ/640?tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "ppt")
+![ppt](https://github.com/tubbodeTang/PicBed/blob/master/trick_1_1.png?raw=true)
 
 
 1. 把 PPT 文件的后缀名改成压缩文件的后缀名「 .rar 」
 
-
-
-![rename](https://mmbiz.qpic.cn/mmbiz_png/Sv04OO32Nsbr66iaXxmcyHMg2agzW8um5awe6CPqeyeqC3ic5Yg5kIvBn02e7Rk460Ng6b38oyYETpSkVyLJ5Nsg/640?tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "rename")
+![rename](https://github.com/tubbodeTang/PicBed/blob/master/trick_1_2.png?raw=true)
 
 
 2. 把变成压缩文件的 PPT 解压到文件夹
 
-![unzip](https://mmbiz.qpic.cn/mmbiz_png/Sv04OO32Nsbr66iaXxmcyHMg2agzW8um5sST1OwWibiao4mgjp6AmxkepOuxPHAxBveSqt04Kq922bR5eoMoJsZXg/640?tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "unzip")
+![unzip](https://github.com/tubbodeTang/PicBed/blob/master/trick_1_3.png?raw=true)
 
 
 3. 进入解压的文件夹，路径如下「 示例 > ppt > media 」，可以看到所有用在 PPT 中的图片，都在该文件夹中，直接按需获取即可
 
 
-![getAll](https://mmbiz.qpic.cn/mmbiz_png/Sv04OO32Nsbr66iaXxmcyHMg2agzW8um5X5eiaicyHxzXgJjkIhtFgz0fSRmxxhHkovqKpPVib3R65CyrcwYjr7USg/640?tp=webp&wxfrom=5&wx_lazy=1&wx_co=1 "getAll")
+![getAll](https://github.com/tubbodeTang/PicBed/blob/master/trick_1_4.png?raw=true)
 
 
 当然啦，这个方法不止适用于我遇到的这种变态情况，如果平时看到 PPT 中好的素材比较多，也可以通过这个方式来批量提取。
