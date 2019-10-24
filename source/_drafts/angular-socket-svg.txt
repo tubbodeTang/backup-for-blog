@@ -1,0 +1,195 @@
+angular cli 初始化新项目 ： ng new PROJECT-NAME
+会自动下载npm包，但是下载的不全，有些库感觉不能用了，不知道升级了cli之后会不会好点（待验证）
+现在的解决方案就是把以前下载的能跑的项目里的nodemodules拷过来，项目就能运行了。
+
+把项目上传至github，
+在github上新建一个repository，注意选择readme和license的时候，相当于已经更改了这个版本库中master分支一次。
+
+到本地项目用命令行，
+git add .    ; 
+git commit -m ""  ;
+添加修改到本地版本库
+
+再用 
+git remote add origin GitHub上的项目地址
+添加远程仓库
+
+然后就可以用 git push 推送修改到远程仓库。
+
+这里注意在GitHub上新建项目时，如果已经更改了这个版本库中master分支一次，直接push会发生冲突，所以必须得先把远程仓库的更改pull下来，再push，详细见下。
+
+git pull origin master ----allow-unrelated-histories
+
+把两个本没有关联的版本库（本地版本库和远程仓库的版本库）做一个合并、关联
+
+然后就可以git push -u origin master 了
+但是push的时候如果没有把远程仓库的分支作为本地仓库的上游，也是不行的，会说这样：
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+E:\A_MyProject\cli-socket-svg>git push --set-upstream origin master
+然后按照他说的操作一下就可以push提交了
+
+接下来就可以构建项目不断上传更新了
+首先利用angular-cli添加一个soket模块
+ng g component websocket
+
+会发生如下变动
+installing component
+  create src\app\websocket\websocket.component.css
+  create src\app\websocket\websocket.component.html
+  create src\app\websocket\websocket.component.spec.ts
+  create src\app\websocket\websocket.component.ts
+  update src\app\app.module.ts
+
+同理，也可以添加一个svg模块
+
+下一步就是为两个模块添加路由，让我们在不同的两个页面，进行两个模块的测试和操作
+添加路由的时候，要注意添加时候各个模块的引用关系，否则会一直报错。
+
+
+页面上添加简单的ul菜单之后，出现li标签横排中间有空白的现象，网上搜查结果如下：
+https://blog.csdn.net/donggua3694857/article/details/52911662
+
+——————————————————————————————————————————
+websocket部分
+看了阮一峰的这个文，简单明了，用了文末介绍的websoketd
+http://www.ruanyifeng.com/blog/2017/05/websocket.html
+第一步，下载websoketd并解压，配置PATH，然后就可以在命令行全局使用websoketd命令了
+
+websoketd支持很多语言搭建一个简单的websocket服务端，我选的是nodejs。
+直接复制了websocketd的nodejs echo 示例 到 node-ws-server.js中
+然后执行命令行
+websocketd --port=8080 --devconsole node ./node-ws-server.js
+websocketd --port=8080 node ./node-ws-server.js（只开服务，不开测试界面）
+因为命令行不识别nodejs的js文件，所以中间要加上node来解析js文件之后再执行
+
+这个时候打开本地8080端口，就可以连接socket的服务端了。
+通过两种方式建立websocket连接的代码
+1、typescript 直接创建
+2、typescript 经过rxjs的封装，封装成service之后调用创建
+
+第一种比较直接简单，直接调用websocket的各种api就可以实现创建连接、关闭连接、发送接收消息
+
+第二种，因为rxjs不太懂，好像是把websocket弄成了一个observable可观察对象，来发送、解析消息，但是封装过后，其他的接口不知道该怎么调用了。可能唯一一种好处就是可以在不同的component中调用同一个websocket连接地址，然后只要通过unsubscribe和subscribe，来注册是否解析消息就可以了，还得再看一下，不是特别明白
+
+
+因为 websocketd 的示例代码（nodejs）太简单，只有两个示例，我也不会写nodejs，所以又找了一个node 插件 WebSocket-Node，直接形成websocket服务器，感觉功能更强大一点……虽然我还是看不懂，
+但至少会对不同种类数据的请求做出不同种类的回应，然后也可以通过vscode进行调试，比之前那个被封装的更清晰底层一点。额，这个直接用好像发送的时候还要加上protocol才能连接成功，见下面这个链接：
+https://stackoverflow.com/questions/23384205/websocket-server-running-fine-but-cannot-connect-from-client-what-url-should-i
+加上了之后可以返回各种blob arraybuffer 类型的数据了
+
+————————————————————————————————————————————
+svg部分，主要参考了两个地址（见下）
+主要是通过snapsvg这个库来像 Jquery 操作 DOM 那样来操作 svg 元素，但是这个库，各种不能用在typescript环境里，然后就有了一系列StackOverflow里的解答（见6），这其中，我只试出了最后一个方案，就是下了一个commonjs模块的库，直接引入使用的，像上面的type和直接下库引入，我没试出来。
+
+接下来就是svg相关内容和snapsvg库的具体使用了
+
+svg中有一些现成的元素可供使用，但最强大最复杂的两个应该是二次贝塞尔曲线和三次贝塞尔曲线，
+当然，要想直接使用代码去画贝塞尔曲线还是有很大难度的，画的话还是结合illustrator，然后导出svg的方式，之所以要了解贝塞尔曲线的表示，主要是在动画变形的时候，可以了解变换的原理和曲线坐标运动的路径，在特定时间改变特定贝塞尔曲线值，重绘形成动画效果。好处：兼容Retina, 文件尺寸非常小，浏览器兼容性好，动画细腻，可控性高。
+svg动画，主要是靠控制关键点的位置，snapsvg中有一个animate函数，挺好用的。
+
+————————————————————————————————————————————
+中间遇到了项目不能通过cli添加component的情况，说是cli的等级太低了，没办法创建，我当真了，升级了cli，然后操蛋了，1点几到6点几差距太大了，不能兼容了，呵呵，要想用cli，整个项目都得从angular4升级到angualr6，看他的升级说明，发现好麻烦，还涉及到rxjs啥的，乱七八糟的，考虑到国内升级网墙的限制啥的，我放弃了升级原来的项目，决定直接通过新的cli，创建一个angualr6的项目重新开始算了，但就这一步也被坑了好久，还是各种安装包下载不下来或者版本不对不兼容的问题，反正折腾了一天，才算通过cli创建了新项目，然后还下好了nodemodules，最后终于跑起来了示例项目，再也不想来第二次（手动再见……）
+————————————————————————————————————————————
+参考资料：
+#   插播一个关于 TCP HTTP 等的详细区别
+https://jingyan.baidu.com/article/08b6a591e07ecc14a80922f1.html
+#   插播 WebSocket 的各种知识，知乎回答见仁见智，自己鉴别吸收有营养的吧
+https://www.zhihu.com/question/20215561
+#   插播结合腾讯技术实现你画我猜
+https://cloud.tencent.com/developer/article/1004546
+
+1、插播一个关于route 的 forChild 和 forRoot 的区别讲的很详细的帖子：
+https://stackoverflow.com/questions/40498081/routermodule-forrootroutes-vs-routermodule-forchildroutes
+
+2、用 angular-cli 生成的项目，在github上建立仓库之后要把本地的项目上传到github远程仓库，发现无法上传的解决办法：（最后一个最有效）
+
+http://www.cnblogs.com/czwangzheng/p/5086903.html
+
+https://blog.csdn.net/commshare/article/details/31771203
+
+https://blog.csdn.net/lindexi_gd/article/details/52554159
+
+3、websocket关闭的code附录
+https://blog.csdn.net/qq_22627687/article/details/72953244
+
+4、RXJS websocket 实现参考：（示例里的代码编辑器还会报错，能运行，不知道咋解决，但是把类型都改成any就可以了）
+https://stackoverflow.com/questions/45844167/angular-4-rxjs-websocket
+
+https://tutorialedge.net/typescript/angular/angular-websockets-tutorial/
+
+
+5、canvas和svg的比较
+http://udn.yyuap.com/article-9857.html
+
+6、向angular引入svgsnap的操作参考：
+https://stackoverflow.com/questions/43070391/how-to-use-snap-svg-with-angular-v4-0
+
+7、snapSvg attr 全部属性（从代码中扒过来的）
+ cssAttr = {
+    "alignment-baseline": 0,
+    "baseline-shift": 0,
+    "clip": 0,
+    "clip-path": 0,
+    "clip-rule": 0,
+    "color": 0,
+    "color-interpolation": 0,
+    "color-interpolation-filters": 0,
+    "color-profile": 0,
+    "color-rendering": 0,
+    "cursor": 0,
+    "direction": 0,
+    "display": 0,
+    "dominant-baseline": 0,
+    "enable-background": 0,
+    "fill": 0,
+    "fill-opacity": 0,
+    "fill-rule": 0,
+    "filter": 0,
+    "flood-color": 0,
+    "flood-opacity": 0,
+    "font": 0,
+    "font-family": 0,
+    "font-size": 0,
+    "font-size-adjust": 0,
+    "font-stretch": 0,
+    "font-style": 0,
+    "font-variant": 0,
+    "font-weight": 0,
+    "glyph-orientation-horizontal": 0,
+    "glyph-orientation-vertical": 0,
+    "image-rendering": 0,
+    "kerning": 0,
+    "letter-spacing": 0,
+    "lighting-color": 0,
+    "marker": 0,
+    "marker-end": 0,
+    "marker-mid": 0,
+    "marker-start": 0,
+    "mask": 0,
+    "opacity": 0,
+    "overflow": 0,
+    "pointer-events": 0,
+    "shape-rendering": 0,
+    "stop-color": 0,
+    "stop-opacity": 0,
+    "stroke": 0,
+    "stroke-dasharray": 0,
+    "stroke-dashoffset": 0,
+    "stroke-linecap": 0,
+    "stroke-linejoin": 0,
+    "stroke-miterlimit": 0,
+    "stroke-opacity": 0,
+    "css-width": 0,
+    "text-anchor": 0,
+    "text-decoration": 0,
+    "text-rendering": 0,
+    "unicode-bidi": 0,
+    "visibility": 0,
+    "word-spacing": 0,
+    "writing-mode": 0
+};
+

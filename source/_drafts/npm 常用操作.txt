@@ -1,0 +1,7 @@
+看某库的所有版本 npm view XXX versions
+
+看全局安装的所有npm库   npm list -g --depth 0
+
+安装某版本的库   npm install XXX@1.7.2
+
+卸载全局库  npm uninstall XXX -g

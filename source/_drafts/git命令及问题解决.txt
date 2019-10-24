@@ -1,0 +1,7 @@
+用 angular-cli 生成的项目，在github上建立仓库之后要把本地的项目上传到github远程仓库，发现无法上传的解决办法：（最后一个最有效）
+
+http://www.cnblogs.com/czwangzheng/p/5086903.html
+
+https://blog.csdn.net/commshare/article/details/31771203
+
+https://blog.csdn.net/lindexi_gd/article/details/52554159
