@@ -55,4 +55,4 @@ date: 2019-02-19 17:35:01
 
 最后，附上我今年的目标们（后面加了一列对比一下自己以前笼统却从没实现的目标）。
 
-![](https://github.com/tubbodeTang/PicBed/blob/master/2019_Target.png?raw=true)
+![](http://image.tubbodetang.site/2019_Target.png)

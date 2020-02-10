@@ -22,7 +22,7 @@ Cmder 的优点：
 
 - 内置多种主题，支持自定义主题
 
-![官网](https://github.com/tubbodeTang/PicBed/blob/master/cmder_main.png?raw=true)
+![官网](http://image.tubbodetang.site/cmder_main.png)
 
 上面这个图是我从 Cmder 的[官网](http://gallery.echartsjs.com/editor.html?c=xHJaWqD-1Q)找的。
 
@@ -34,11 +34,11 @@ Cmder 的优点：
 
 先给系统变量中添加一个变量，值是解压后 Cmder.exe 所在的路径，然后将这个新添加的变量添加到系统 Path 中：
 
-![环境变量](https://github.com/tubbodeTang/PicBed/blob/master/cmder_3.jpg?raw=true)
+![环境变量](http://image.tubbodetang.site/cmder_3.jpg)
 
 如果有需要，还要向用户变量的 Path 中添加解压后的 bin 路径，才能使配置生效。
 
-![Path](https://github.com/tubbodeTang/PicBed/blob/master/cmder_2.jpg?raw=true)
+![Path](http://image.tubbodetang.site/cmder_2.jpg)
 
 做好配置之后，可以直接使用『Win+R』命令，然后运行 cmder 就可以直接启动 Cmder 了。
 
@@ -48,12 +48,12 @@ Cmder 也可以这样配置，我们只需要以管理员方式打开 Cmd 或者
 
 最后效果就是这样的：
 
-![last](https://github.com/tubbodeTang/PicBed/blob/master/cmder_1.png?raw=true)
+![last](http://image.tubbodetang.site/cmder_1.png)
 
 
 其他的个性化设置，比如主题更换等我就不多啰嗦了，在Settings里大家都可以快速找到
 
-![settings](https://github.com/tubbodeTang/PicBed/blob/master/cmder_0.jpg?raw=true)
+![settings](http://image.tubbodetang.site/cmder_0.jpg)
 
 
 毕竟自己配置的才是最酷最好用最适合自己开发习惯的。

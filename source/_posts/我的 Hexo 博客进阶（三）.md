@@ -81,11 +81,11 @@ hexo d
 
 登录后在用户中心-站点管理中，添加站点，按照步骤操作
 
-![添加站点](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_1.png?raw=true)
+![添加站点](http://image.tubbodetang.site/blog_adv_2_1.png)
 
 
 
-![百度验证](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_2.png?raw=true)
+![百度验证](http://image.tubbodetang.site/blog_adv_2_2.png)
 
 下载验证文件，然后放在博客的 `themes` 主题文件夹的 `source` 目录下，这样博客生成发布之后，这个文件才会在站点的根目录。
 
@@ -100,7 +100,7 @@ hexo d
 
 按照步骤验证，最后验证成功。
 
-![验证成功](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_3.png?raw=true)
+![验证成功](http://image.tubbodetang.site/blog_adv_2_3.png)
 
 到这里我们已经把站点添加到了平台中。
 
@@ -108,13 +108,13 @@ hexo d
 
 地址按照要求填写即可：`yoursite/baidusitemap.xml`
 
-![提交百度站点地图](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_5.png?raw=true)
+![提交百度站点地图](http://image.tubbodetang.site/blog_adv_2_5.png)
 
 这里可以看到提交站点其实有很多种方法，甚至可以手动一个一个粘贴提交，自动提交也可以用代码主动推送，我这里只选择了最方便的 sitemap 解决方案，如果想要更快速的提交自己的站点，也可以查一查主动推送的实现方法。
 
 提交之后，可以看到自己的站点正在等待被抓取，这个等待时间不一定，新站可能会更慢，百度的脾气，大家是知道的，如果等不及，建议还是上主动推送。
 
-![提交结果](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_6.png?raw=true)
+![提交结果](http://image.tubbodetang.site/blog_adv_2_6.png)
 
 
 
@@ -122,7 +122,7 @@ hexo d
 
 谷歌和百度除了站长平台的界面长得不一样以外，其他流程都是一样的。就不啰嗦了，还是添加一个站点，然后按步骤验证：
 
-![谷歌验证](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_4.png?raw=true)
+![谷歌验证](http://image.tubbodetang.site/blog_adv_2_4.png)
 
 下载文件之后放在博客的 `themes` 主题文件夹的 `source` 目录下，生成发布博客：
 
@@ -135,7 +135,7 @@ hexo d
 
 然后在站点地图的地方添加站点地图 `sitemap.xml` 即可
 
-![谷歌站点添加](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_7.png?raw=true)
+![谷歌站点添加](http://image.tubbodetang.site/blog_adv_2_7.png)
 
 提交之后一样看到爬取结果。谷歌的比百度快一些，基本一天之后就有状态了。
 
@@ -145,7 +145,7 @@ hexo d
 
 除了上面的方法，必应比较贴心的准备了和 Google 站长的关联选项，所以我这里就不再重复操作了，直接关联上 Google 站长的信息就可以了。
 
-![Bing](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_8.png?raw=true)
+![Bing](http://image.tubbodetang.site/blog_adv_2_8.png)
 
 不过必应的收录要求也挺高的，据说他喜欢收录图片站和文章比较长的，收录前还会观察你的站点是否是频繁更新的。收录的时间周期也比较长。
 

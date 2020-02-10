@@ -30,9 +30,9 @@ Coding 是腾讯旗下的代码托管平台，和 GitHub 类似，所以 Coding 
 
 我这里采用的是导入的方法：
 
-在 Coding 中新建一个名为 ``` yourname.coding.me``` 的项目，不勾选 `启用 README.md 文件初始化项目`，也不添加 `License` 和 `.gitignore` 文件。项目地址那里，会根据你的项目名称自动生成。由于 pages 服务对项目名有特殊要求，所以这里我们要尽量写成下面的形式，不然可能会造成页面无法正常打开，后面修改路径会很麻烦还容易出错。
+在 Coding 中新建一个名为 ` yourname.coding.me` 的项目，不勾选 `启用 README.md 文件初始化项目`，也不添加 `License` 和 `.gitignore` 文件。项目地址那里，会根据你的项目名称自动生成。由于 pages 服务对项目名有特殊要求，所以这里我们要尽量写成下面的形式，不然可能会造成页面无法正常打开，后面修改路径会很麻烦还容易出错。
 
-![](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_10.png?raw=true)
+![](http://image.tubbodetang.site/blog_adv_2_10.png)
 
 
 
@@ -40,7 +40,7 @@ Coding 是腾讯旗下的代码托管平台，和 GitHub 类似，所以 Coding 
 
 以前用 GitHub 的时候已经生成过密钥，密钥所在目录为(`C:\Users\yourUserName\.ssh\id_rsa`)，直接拷贝之后在个人设置中添加就好了
 
-![](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_9.png?raw=true)
+![](http://image.tubbodetang.site/blog_adv_2_9.png)
 
 然后测试一下公钥：
 
@@ -116,17 +116,17 @@ hexo d
 
 直接在左侧栏找到 ``` 代码 - pages 服务``` 选项卡，一键开启即可。
 
-![开启 Pages 服务](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_12.png?raw=true)
+![开启 Pages 服务](http://image.tubbodetang.site/blog_adv_2_12.png)
 
 片刻，开启成功：
 
-![](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_13.png?raw=true)
+![](http://image.tubbodetang.site/blog_adv_2_13.png)
 
 直接点击访问地址，就可以看到自己的静态博客了。
 
 Coding 会帮我们自动做一些配置，因为我们的博客只有 master 分支，所以默认就建立在 master 分支上。我们也可以做一些其他的设置，比如绑定域名之类的，这个在 [博客进阶（一）]() 中我们已经讲过，有需要的可以参考设置一下。
 
-![](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2_11.png?raw=true)
+![](http://image.tubbodetang.site/blog_adv_2_11.png)
 
 
 

@@ -18,7 +18,7 @@ date: 2019-07-01 18:13:01
 
 咨询人员给了我们一个 Excel 文档，里面只有一个根据数据生成的散点图，源数据的表格并不在这个文档里，而他的要求是……让我们用图里的数据拟合出曲线公式来，然后用拟合出来的公式计算数据。
 
-![](https://github.com/tubbodeTang/PicBed/blob/master/tricks_3_0.png?raw=true)
+![](http://image.tubbodetang.site/tricks_3_0.png)
 
 当时我和我的小伙伴内心又是万马奔腾，可以看到图中数据点很密，点都已经连成线了，根本不是靠带几个值就能反算或者是根据图表上的几个数据点就能编出计算结果来的……
 
@@ -42,11 +42,11 @@ date: 2019-07-01 18:13:01
 
 首先打开 Excel（我的是 2013），然后在表名上右击打开代码编辑器。
 
-![](https://github.com/tubbodeTang/PicBed/blob/master/tricks_3_1.png?raw=true)
+![](http://image.tubbodetang.site/tricks_3_1.png)
 
 代码编辑器长这样：
 
-![](https://github.com/tubbodeTang/PicBed/blob/master/tricks_3_2.png?raw=true)
+![](http://image.tubbodetang.site/tricks_3_2.png)
 
 在 ChartData 表（表名也要和程序中的对应才能找到对象）填入如下代码。
 
@@ -86,11 +86,11 @@ End Sub
 
 最后选中我们的图表（一定要选中才有目标对象），运行宏。
 
-![](https://github.com/tubbodeTang/PicBed/blob/master/tricks_3_3.png?raw=true)
+![](http://image.tubbodetang.site/tricks_3_3.png)
 
 然后就看到，酷炫的结果出现了。那张散点图里的 2000 多条数据，全部被提取出来了，这样就可以根据数据去重新拟合一个曲线了。
 
-![](https://github.com/tubbodeTang/PicBed/blob/master/tricks_3_4.png?raw=true)
+![](http://image.tubbodetang.site/tricks_3_4.png)
 
 是不是还挺强大的，能做到一些基础功能做不到或者想都不敢想的事。
 

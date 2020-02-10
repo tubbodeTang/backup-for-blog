@@ -1,7 +1,12 @@
-¿´Ä³¿âµÄËùÓĞ°æ±¾ npm view XXX versions
+çœ‹æŸåº“çš„æ‰€æœ‰ç‰ˆæœ¬ npm view XXX versions
 
-¿´È«¾Ö°²×°µÄËùÓĞnpm¿â   npm list -g --depth 0
+çœ‹å…¨å±€å®‰è£…çš„æ‰€æœ‰npmåº“   npm list -g --depth 0
 
-°²×°Ä³°æ±¾µÄ¿â   npm install XXX@1.7.2
+å®‰è£…æŸç‰ˆæœ¬çš„åº“   npm install XXX@1.7.2
 
-Ğ¶ÔØÈ«¾Ö¿â  npm uninstall XXX -g
+å¸è½½å…¨å±€åº“  npm uninstall XXX -g
+
+
+
+npm çš„é•œåƒè®¾ç½®
+

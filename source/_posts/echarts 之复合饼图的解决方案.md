@@ -44,7 +44,7 @@ date: 2018-05-22 22:39:01
 
 于是乎有了下面这个效果，具体代码实现和结果可以到 Gallery 里 [查看](http://gallery.echartsjs.com/editor.html?c=xHJaWqD-1Q)。
 
-![实现效果图](https://github.com/tubbodeTang/PicBed/blob/master/echart_complexpie.png?raw=true)
+![实现效果图](http://image.tubbodetang.site/echart_complexpie.png)
 
 
 两个版本的思路出来效果之后，我都给了 GitHub Issues 上和我相同问题的那个哥们一个回复，他也回复了我，和大家一起思考问题的感觉还是很棒的。E []E

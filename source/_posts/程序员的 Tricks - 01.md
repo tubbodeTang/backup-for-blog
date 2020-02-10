@@ -39,23 +39,23 @@ date: 2018-08-10 08:20:06
 
 有这样一个一页放了 N 多大图的 PPT
 
-![ppt](https://github.com/tubbodeTang/PicBed/blob/master/trick_1_1.png?raw=true)
+![ppt](http://image.tubbodetang.site/trick_1_1.png)
 
 
 1. 把 PPT 文件的后缀名改成压缩文件的后缀名「 .rar 」
 
-![rename](https://github.com/tubbodeTang/PicBed/blob/master/trick_1_2.png?raw=true)
+![rename](http://image.tubbodetang.site/trick_1_2.png)
 
 
 2. 把变成压缩文件的 PPT 解压到文件夹
 
-![unzip](https://github.com/tubbodeTang/PicBed/blob/master/trick_1_3.png?raw=true)
+![unzip](http://image.tubbodetang.site/trick_1_3.png)
 
 
 3. 进入解压的文件夹，路径如下「 示例 > ppt > media 」，可以看到所有用在 PPT 中的图片，都在该文件夹中，直接按需获取即可
 
 
-![getAll](https://github.com/tubbodeTang/PicBed/blob/master/trick_1_4.png?raw=true)
+![getAll](http://image.tubbodetang.site/trick_1_4.png)
 
 
 当然啦，这个方法不止适用于我遇到的这种变态情况，如果平时看到 PPT 中好的素材比较多，也可以通过这个方式来批量提取。

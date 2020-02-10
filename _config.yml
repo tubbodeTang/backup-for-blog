@@ -82,6 +82,7 @@ deploy:
   repo: 
       github: git@github.com:tubbodeTang/tubbodeTang.github.io.git
       coding: git@git.dev.tencent.com:tubbodeTang/tubbodeTang.coding.me.git
+      hexo: git@39.106.126.1:/home/git/hexo.git,master
   branch: master
 
 

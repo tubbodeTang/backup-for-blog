@@ -21,7 +21,7 @@ date: 2019-01-08 17:51:01
 
 比如在下面这个图里，我要拿到当前路径下所有的歌名，不只有当前文件夹下一些分散的歌，还有按照歌手和歌手下面按专辑分类文件夹里面的歌。
 
-![](https://github.com/tubbodeTang/PicBed/blob/master/trick_2_1.png?raw=true)
+![](http://image.tubbodetang.site/trick_2_1.png)
 
 没有相关经验的人，此时第一个想到的可能就是一个一个文件去复制文件名整理到文档中，当然，这作为最笨的办法，是可行的。缺点就是非常耗时间，而且如果文件很多（几百个），文件夹又分的比较细致，可能刚操作十来个就崩溃打算放弃了。
 
@@ -50,11 +50,11 @@ pause
 
 3. 双击执行 .bat，你可以看到命令行黑框（有的只会一闪而过，和批处理命令怎么写有关），说明我们的命令已经执行了
 
-![](https://github.com/tubbodeTang/PicBed/blob/master/trick_2_3.png?raw=true)
+![](http://image.tubbodetang.site/trick_2_3.png)
 
 4. 我得到的结果如下（歌名按层级全部提取出来）
 
-![](https://github.com/tubbodeTang/PicBed/blob/master/trick_2_4.png?raw=true)
+![](http://image.tubbodetang.site/trick_2_4.png)
 
 
 从上面的简单步骤不难看出，批处理真的是偷懒利器，溜了溜了

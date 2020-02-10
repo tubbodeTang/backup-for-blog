@@ -3,7 +3,7 @@ title: 我的 Hexo 博客进阶（一）
 tags: 博客搭建
 categories: 博客搭建
 abbrlink: 62063
-date: 2019-07-02 13:31:01
+date: 2019-07-12 13:31:01
 ---
 
 [Hexo 博客搭建](www.tubbodetang.site/2017/09/02/Hexo 博客搭建/) 这篇文章已经讲了如何借助 Hexo 搭建一个静态博客，目前我们的博客已经有了属于我们的内容和样式风格，也可以借助 GitHub 的 Pages 功能在互联网上访问到了，那么如何才能让我们的博客写起来效率更高，更高大上呢？
@@ -69,21 +69,21 @@ date: 2019-07-02 13:31:01
 
 购买前先挑一个自己中意的，然后搜索一下是否可用，就可以加入购物车付费购买了，和淘宝一个流程。不同的域名价格也不同，有的还有连续购买多年的优惠活动，还有一些网站会举办新用户赠送一年免费域名这种活动，都可以了解一下，然后做个对比，选择一个最适合自己的就可以了。
 
-![阿里云域名购买](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_1.png?raw=true)
+![阿里云域名购买](http://image.tubbodetang.site/blog_adv_1.png)
 
 ##### 域名的关联
 
 有了域名之后，我们还要对域名进行实名认证，没有认证的域名状态会显示未认证，无法正常使用，这一步也很简单，只要上传一下身份证信息，几分钟之后就可以认证成功了。
 
-![域名认证](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_2.png?raw=true)
+![域名认证](http://image.tubbodetang.site/blog_adv_2.png)
 
 然后我们对域名添加解析，解析到自己 GitHub Pages 博客的 IP 地址。
 
-![添加解析](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_3.png?raw=true)
+![添加解析](http://image.tubbodetang.site/blog_adv_3.png)
 
 过几分钟之后在 GitHub 的配置中，可以看到已经关联到了我们的域名。
 
-![](https://github.com/tubbodeTang/PicBed/blob/master/blog_adv_4.png?raw=true)
+![](http://image.tubbodetang.site/blog_adv_4.png)
 
 此时再访问我们的域名，就可以看到博客已经可以直接通过域名打开了。
 
