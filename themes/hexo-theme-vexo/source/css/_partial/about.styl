@@ -17,6 +17,19 @@
     background-color: rgba(0, 0, 0, .05)
   @media m-mobile
     height: 250px
+.discription
+  /* opacity: 0; */
+  font-size: 1.7em;
+  font-weight: bold;
+  transform: translateY(-125px);
+  transition: all 0.4s;
+  transition-delay: 0.1s;
+  color: #eaeaea;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  text-shadow: #000 2px 2px 2px;
+  word-spacing: 0.42em;
 .author
   margin-top: -50px
   width: 100%
@@ -47,11 +60,7 @@
     transform: translateY(-20px)
     transition: all 0.4s
     transition-delay: 0.05s
-  .discription
-    opacity: 0
-    transform: translateY(-20px)
-    transition: all 0.4s
-    transition-delay: 0.1s
+  
   .share-icons
     opacity: 0
     transform: translateY(-20px)
@@ -69,9 +78,28 @@
       color: #e6162d
     .icon-github
       color: #333333
+      background: #333333;
     .icon-zhihu
       color: #0767c8
+      background: #0767c8
     .icon-twitter
       color: #2aa9e0
     .icon-douban
       color: #00B51D
+      .fa-stack
+        height: 2.3em
+        width: 2.3em
+        line-height: 2.3em
+        vertical-align: middle;
+  .qrcodes
+    display: inline-block
+    vertical-align: middle;
+    padding-top: 18px
+    img
+      width: 50px
+      height 50px
+    span 
+      font-size: 12px
+      display: block
+      
+      

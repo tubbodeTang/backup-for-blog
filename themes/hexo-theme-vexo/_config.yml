@@ -1,5 +1,5 @@
 author: tubbodeTang # 作者
-description: Keep Fighting
+description: 踏波堂
 keyword: 
 favicon: css/images/myLogo.png
 
@@ -8,8 +8,10 @@ excerpt_link: Read more
 menu:
  Home: /
  # Diary: /diary/
+ 合集: /tags/
  Archives: /archives/
- About: /about/
+ 关于我: /about/
+
 
 
 # highlight
@@ -29,5 +31,13 @@ baidu_id:
 
 about: 
   banner: http://file.muyutech.com/about.jpg
-  avatar: https://avatars3.githubusercontent.com/u/16443628?v=3&s=460
+  avatar: http://image.tubbodetang.site/logo-1.png
   description: The end is always near.
+  # weibo_username: yanm1ng
+  # twitter_username: yanm1ng
+  github_username: tubbodeTang
+  zhihu_username: zeeeegzal
+  wx_gzh: http://image.tubbodetang.site/vxgh_qrcode.jpg
+  wx: http://image.tubbodetang.site/vx_qrcode.png
+  # douban_username: yanm1ng
+  # linkedin_username:
