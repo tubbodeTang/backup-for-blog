@@ -24,20 +24,28 @@ gitment_repo: tubbodeTang.github.io
 gitment_oauth_id: 2eb057f87192cbf561c3
 gitment_oauth_secret: db8188fb69bd9075c92b9a0fc2efc659b4194d9c
 
-# uyan
+# uyan config
 # if you want to use uyan as your blog comment, plz remove/comment out gitment config
-
 baidu_id: 
+google_analytics:
+# disqus config
+disqus_shortname: 
 
 about: 
-  banner: http://file.muyutech.com/about.jpg
+  banner: http://image.tubbodetang.site/adventure-altitude-clear-sky-cold.jpg
   avatar: http://image.tubbodetang.site/logo-1.png
   description: The end is always near.
   # weibo_username: yanm1ng
   # twitter_username: yanm1ng
   github_username: tubbodeTang
   zhihu_username: zeeeegzal
-  wx_gzh: http://image.tubbodetang.site/vxgh_qrcode.jpg
+  wx_gzh: http://image.tubbodetang.site/vxgh_qrcode.png
   wx: http://image.tubbodetang.site/vx_qrcode.png
   # douban_username: yanm1ng
   # linkedin_username:
+
+# MathJax Support
+mathjax:
+  enable: true
+  per_page: false
+  cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML

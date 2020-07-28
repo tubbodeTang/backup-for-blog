@@ -3,7 +3,7 @@
   <p class="post-date">标签检索</p>
 </div>
 <main class="app-body">
-  <div id="tag-cloud">
+  <div id="tag-cloud" class="tagpage">
     <% site.tags.map(function(tag, index) { %>
       <a class="tag<%= Math.round(Math.random() * 3) %>" data-name="tag-<%= tag.name %>"><%= tag.name %></a>
     <% }) %>
@@ -29,6 +29,7 @@
     $('.header').removeClass('fixed-header')
 
     var tag = location.hash.replace('#', '')
+    debugger
     if (tag) {
       var tagId = "#tag-" + tag;
       $("html, body").animate({

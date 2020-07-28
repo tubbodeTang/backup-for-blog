@@ -1,31 +1,80 @@
 <main class="app-body">
-  <% page.posts.each(function(post) { %>
-  
-  <% if (post.title.indexOf('【日课】') ==-1){ %>
-  <!-- <% console.log(post.title); %> -->
-  <article class="article-card">
-    <h2 class="article-head">
-      <a href="<%- url_for(post.path) %>"><%- post.title %></a>
-    </h2>
-    <p class="article-date"><%- date(post.date, "YYYY-MM-DD") %></p>
-    <!-- <% if (post.tags && post.tags.length) { %>
-      <%- partial('_partial/tag', { tags: post.tags }) %>
-    <% } %> -->
-    <!-- <div class="article-summary">
-      <% if (post.excerpt) { %>
-        <%- post.excerpt %>
-      <% } else { %>
-        <%- truncate(strip_html(post.content), { length: 150, omission: ' ...' }) %>
-      <% } %>
-    </div> -->
-    <!-- <a class="more" href="<%- url_for(post.path) %>"><%- theme.excerpt_link %></a> -->
-  </article>
-  <% }%>
-  
-  <% }) %>
+  <div class="lcontent article-list">
+    <% page.posts.each(function(post) { %>
 
-  <% if (page.total > 1){ %>
+    <% if (post.title.indexOf('【日课】') ==-1){ %>
+    <!-- <% console.log(post.title); %> -->
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+      </h2>
+      <p class="article-date"><%- date(post.date, "YYYY-MM-DD") %></p>
+      <!-- <% if (post.tags && post.tags.length) { %>
+          <%- partial('_partial/tag', { tags: post.tags }) %>
+        <% } %> -->
+      <!-- <div class="article-summary">
+          <% if (post.excerpt) { %>
+            <%- post.excerpt %>
+          <% } else { %>
+            <%- truncate(strip_html(post.content), { length: 150, omission: ' ...' }) %>
+          <% } %>
+        </div> -->
+      <!-- <a class="more" href="<%- url_for(post.path) %>"><%- theme.excerpt_link %></a> -->
+    </article>
+    <% }%>
+
+    <% }) %>
+
+    <% if (page.total > 1){ %>
     <%- partial('_partial/pager') %>
-  <% } %>
+    <% } %>
+  </div>
+
+  <div class="lcontent tag-list">
+  </div>
+
 </main>
 
+<div class="rcontent">
+  <div id="tag-cloud">
+    <% site.tags.map(function(tag, index) { %>
+    <% console.log(tag); %>
+    <a class="tag tag<%= Math.round(Math.random() * 3) %>" data-name="tag-<%= tag.name %>"><%= tag.name %></a>
+    <% }) %>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var tagList = []
+    $(".tag").on('click', function () {
+      var src = $(this)[0]
+      var tagName = $(this)[0].dataset.name
+      $($(this)[0]).toggleClass('active-tag')
+      if (tagList.indexOf(tagName) > -1) {
+        tagList.splice(tagList.indexOf(tagName), 1)
+      } else {
+        tagList.push(tagName)
+      }
+      console.log(src)
+      $('.lcontent.tag-list').empty();
+
+      var html =
+        `<% site.tags.each(function(tag, index){ %><div class="tag-list-index"><h3 class="tag-name" id="tag-<%= tag.name %>"><%= tag.name %></h3><% tag.posts.map(function(post) { %><ul class="tag-preview"><li><a href="<%- config.root %><%- post.path %>"><%- post.title || "Untitled" %></a></li></ul><% }) %></div><% }) %>`
+      let $html = $(html)
+      $html.each((index, $element) => {
+        let appendItem = null
+        let child = $element.children
+        let itemName = child[0].id
+        if (tagList.indexOf(itemName) > -1) {
+          $('.lcontent.tag-list').append($element)
+        }
+      });
+      
+      tagList.length === 0 ? $('.lcontent.article-list').css('display', 'block') : $('.lcontent.article-list').css(
+        'display', 'none')
+      tagList.length === 0 ? $('.lcontent.tag-list').css('display', 'none') : $('.lcontent.tag-list').css(
+        'display', 'block')
+    })
+  })();
+</script>
