@@ -33,10 +33,16 @@
   <div class="lcontent tag-list">
   </div>
 
+  <div class="lcontent local-search-result-cls" id="search-result">
+  </div>
+
 </main>
 
 <div class="rcontent">
+  <%- partial('_third-party/search') %>
+
   <div id="tag-cloud">
+    <p>标签合集</p>
     <% site.tags.map(function(tag, index) { %>
     <% console.log(tag); %>
     <a class="tag tag<%= Math.round(Math.random() * 3) %>" data-name="tag-<%= tag.name %>"><%= tag.name %></a>

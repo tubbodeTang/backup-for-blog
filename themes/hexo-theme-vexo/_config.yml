@@ -49,3 +49,9 @@ mathjax:
   enable: true
   per_page: false
   cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+# searchPlugin config
+local_search:
+  enable: true  #搜索开关
+  location: "left: calc(1em + 4px);top: 1em;" #搜索框位置top/left/bottom/right
+  facade: ""  #搜索框样式

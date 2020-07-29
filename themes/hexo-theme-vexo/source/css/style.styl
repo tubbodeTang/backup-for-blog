@@ -6,11 +6,12 @@
 
 @font-face
   font-family: 'iconfont';  /* project id 400939 */
-  src: url('//at.alicdn.com/t/font_400939_qb6tlzjpizjb57b9.eot');
-  src: url('//at.alicdn.com/t/font_400939_qb6tlzjpizjb57b9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_400939_qb6tlzjpizjb57b9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_400939_qb6tlzjpizjb57b9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_400939_qb6tlzjpizjb57b9.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_400939_4cobruw6abe.eot');
+  src: url('//at.alicdn.com/t/font_400939_4cobruw6abe.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_400939_4cobruw6abe.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_400939_4cobruw6abe.woff') format('woff'),
+  url('//at.alicdn.com/t/font_400939_4cobruw6abe.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_400939_4cobruw6abe.svg#iconfont') format('svg');
 
 .iconfont
     font-family:"iconfont" !important;
@@ -92,7 +93,7 @@ pre
   padding: 2em 1em
   margin: 0 auto
   height: 100%
-  max-width: 750px
+  max-width: 960px
   position: relative
   opacity: 0
   transform: translateY(-20px)
@@ -122,7 +123,8 @@ pre
 .lcontent
   padding: 1em
   height: 100%
-  width: 66.6%
+  width: 60%
+  // width: 66.6%
   position: relative
   @media m-mobile
     width: 100%
@@ -130,6 +132,7 @@ pre
 
 .lcontent.tag-list
   margin-left: 0!important
+  display: none
   .tag-preview
     padding-left: 0
     li
@@ -137,20 +140,26 @@ pre
       margin: 12px 0;
   .tag-list-index
     &:first-child
-      margin-top: calc(100px - 1em)
+      margin-top: 70px
 
 .rcontent
   padding: 1em;
   height: auto;
   width: 250px;
   position: fixed;
-  top: 100px;
+  top: 99px;
   // right: 160px;
-  left: calc(100vw - 30%);
+  left: calc(100vw - 32%);
   @media m-mobile
     display: none
   #tag-cloud
     text-align: initial
+    margin: 60px 0
+    p
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 4px;
+      margin-bottom: 17px;
     a
       line-height: 1.8em;
       padding: 0 5px;
@@ -202,7 +211,7 @@ pre
 .article-card
   padding-bottom: 25px
   &:first-child
-    margin-top: 100px
+    margin-top: 70px
 
 .diary-section
   &:first-child
@@ -434,3 +443,4 @@ h2.article-head
 @import "_partial/project"
 @import "_partial/catalog"
 @import "_partial/nav"
+@import "plugins/search"
